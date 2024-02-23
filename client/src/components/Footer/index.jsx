@@ -22,9 +22,9 @@ const Footer = () => {
             aria-label="heart"
             aria-hidden="false"
           >
-            ❤️
+            &#9889;
           </span>{' '}
-          by the Tech Thoughts team.
+          by the Flash-stronauts.
         </h4>
       </div>
     </footer>
