@@ -1,7 +1,5 @@
 import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/ThoughtList';
-import ThoughtForm from '../components/ThoughtForm';
 import Profile from './Profile';
 import { QUERY_CARDS } from '../utils/queries';
 
@@ -17,16 +15,6 @@ const Home = () => {
           style={{ border: '1px dotted #1a1a1a' }}
         >
           <Profile />
-        </div>
-        <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ThoughtList
-              thoughts={thoughts}
-              title="Some Feed for Thought(s)..."
-            />
-          )}
         </div>
       </div>
     </main>
