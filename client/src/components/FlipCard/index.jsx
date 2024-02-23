@@ -26,40 +26,41 @@ const FlipCard = ({ _id, front, back, handleEditClick }) => {
   };
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
-      <div className="card">
-        <div className="card-body position-relative">
-          <div className="position-absolute top-1 px-2 z-index-3 d-flex justify-content-between w-100">
-            <div onClick={() => handleDelete(_id)}>
-              <FaTrashAlt />
+     <div className="card shadow">
+      <div className="card-body position-relative">
+        <div className="position-absolute top-0 px-2 d-flex justify-content-between w-100">
+        <div onClick={() => handleDelete(_id)}>
+              <FaTrashAlt color="red" />
             </div>
             <div onClick={handleEditClick}>
               <MdModeEditOutline />
             </div>
-          </div>
-          <div className="mt-4">{front}</div>
-
-          <button className="btn" onClick={handleFlip}>
-            Click to flip
-          </button>
         </div>
-      </div>
+        <div className="mt-4">{front}</div>
 
-      <div className="card">
-        <div className="card-body position-relative">
-          <div className="position-absolute top-1 px-2 z-index-3 d-flex justify-content-between w-100">
-            <div onClick={() => handleDelete(_id)}>
-              <FaTrashAlt />
+        <button className="btn btn-primary mt-3" onClick={handleFlip}>
+           Ans
+        </button>
+      </div>
+    </div>
+
+    <div className="card shadow">
+      <div className="card-body position-relative">
+        <div className="position-absolute top-0 px-2 d-flex justify-content-between w-100">
+        <div onClick={() => handleDelete(_id)}>
+              <FaTrashAlt color="red" />
             </div>
             <div onClick={handleEditClick}>
               <MdModeEditOutline />
             </div>
-          </div>
-          <div className="mt-4">{back}</div>
-          <button className="btn" onClick={handleFlip}>
-            Click to flip
-          </button>
         </div>
+        <div className="mt-4">{back}</div>
+
+        <button className="btn btn-danger mt-3" onClick={handleFlip}>
+         Qns
+        </button>
       </div>
+    </div>
     </ReactCardFlip>
   );
 };
