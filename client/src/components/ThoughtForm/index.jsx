@@ -55,7 +55,7 @@ const ThoughtForm = () => {
 
   return (
     <div>
-      <h3>What do you want to learn today?</h3>
+      <h3>Create new Flashcard</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -67,7 +67,7 @@ const ThoughtForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="question"
-                placeholder="Here's a new question..."
+                placeholder="Prompt..."
                 value={question}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
@@ -77,7 +77,7 @@ const ThoughtForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="answer"
-                placeholder="Here's a new answer..."
+                placeholder="Answer..."
                 value={answer}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
