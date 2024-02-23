@@ -36,30 +36,30 @@ const FlipCard = ({_id, front, back }) => {
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
       
-      <div className="card">
+      <div className="card border border-0">
       <div className="card-body position-relative">
-        <div className="position-absolute top-1 right-1 z-index-3" onClick={()=>handleDelete(_id)} >
-              <FaTrashAlt />
+        <div className="position-absolute top-1 start-1 z-index-3" onClick={()=>handleDelete(_id)} >
+              <FaTrashAlt className="text-danger" />
               </div>
-      <div className="mt-4">
+      <div className="m-4 mt-5 pt-2 pb-2">
         {front}
         </div>
 
-        <button className ="btn" onClick={handleFlip}>Click to flip</button>
+        <button className ="btn btn-info" onClick={handleFlip}>Click for Answer</button>
         </div>
       </div>
 
-      <div className="card">
+      <div className="card border border-0">
         <div className="card-body position-relative">
-        <div className="position-absolute top-1 right-1 z-index-3" onClick={()=>handleDelete(_id)} >
+        <div className="position-absolute top-1 start-1 z-index-3" onClick={()=>handleDelete(_id)} >
 
-              <FaTrashAlt />
+              <FaTrashAlt className="text-danger" />
               </div>
-      <div className="mt-4">
+      <div className="m-4 mt-5 pt-2 pb-2">
 
       {back}
       </div> 
-        <button className ="btn" onClick={handleFlip}>Click to flip</button>
+        <button className ="btn btn-outline-info" onClick={handleFlip}>Click for Question</button>
         </div>
       </div>
     </ReactCardFlip>

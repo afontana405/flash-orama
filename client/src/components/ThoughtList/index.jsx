@@ -14,10 +14,10 @@ const ThoughtList = ({
   return (
     <div>
       {showTitle && <h3>{title}</h3>}
-      <div className="d-flex">
+      <div className="row">
         {thoughts &&
           thoughts.map((thought) => (
-            <div key={thought._id} className="card m-3 ">
+            <div key={thought._id} className="card col-sm-12 col-md-6 ">
              
 
               <FlipCard _id={thought._id} front={thought.front} back={thought.back} />
