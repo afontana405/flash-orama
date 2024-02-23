@@ -8,7 +8,7 @@ const ThoughtList = ({
   showUsername = true,
 }) => {
   if (!thoughts.length) {
-    return <h3>No Ideas Yet</h3>;
+    return <h3>No Flashcards Yet</h3>;
   }
 
   return (
