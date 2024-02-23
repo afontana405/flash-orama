@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import FlipCard from '../FlipCard';
-
+import { Link } from "react-router-dom";
+import FlipCard from "../FlipCard";
+import { FaTrashAlt } from "react-icons/fa";
 const ThoughtList = ({
   thoughts,
   title,
@@ -14,15 +14,15 @@ const ThoughtList = ({
   return (
     <div>
       {showTitle && <h3>{title}</h3>}
-      <div className='d-flex'>
+      <div className="d-flex">
+        {thoughts &&
+          thoughts.map((thought) => (
+            <div key={thought._id} className="card m-3 ">
+             
 
-      {thoughts &&
-        thoughts.map((thought) => (
-          <div key={thought._id} className="card m-3">
-          <FlipCard front= {thought.front} back={thought.back} />
-           
-          </div>
-        ))}
+              <FlipCard _id={thought._id} front={thought.front} back={thought.back} />
+            </div>
+          ))}
       </div>
     </div>
   );

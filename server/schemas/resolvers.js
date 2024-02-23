@@ -52,6 +52,23 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+     deleteCard: async (parent, { _id }, context) => {
+        if (context.user) {
+          const card = await Card.findById(_id);
+          if (!card) {
+            throw new Error('Card not found!');
+          }
+      
+          // Remove the card from the database
+          
+          // Update the user's document by removing the card's ID from their cards array
+          await User.findByIdAndUpdate(context.user._id, { $pull: { cards: _id } });
+          await Card.findByIdAndRemove(_id);
+      
+          return card;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
       addCategory: async (parent, { categoryName }) => {
         return await Category.create({ categoryName });
       },
