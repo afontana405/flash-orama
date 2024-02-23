@@ -9,9 +9,11 @@ import FlipCard from '../components/FlipCard';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
+import { useState } from 'react';
 
 const Profile = () => {
   const { username: userParam } = useParams();
+const [editCardDetails,setEditCardDetails] = useState(null)
 console.log(userParam);
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
@@ -35,7 +37,12 @@ console.log(data);
       </h4>
     );
   }
-
+const handleEditClick = (card)=>{
+  setEditCardDetails(card)
+}
+const handleCancelClick = ()=>{
+  setEditCardDetails(null)
+}
   return (
     <div>
       <div className="flex-row justify-center mb-3">
@@ -47,7 +54,11 @@ console.log(data);
             className="col-12 col-md-10 mb-3 p-3"
             style={{ border: '1px dotted #1a1a1a' }}
           >
-            <ThoughtForm />
+            <ThoughtForm 
+
+              editCardDetails={editCardDetails}
+              handleCancelClick={handleCancelClick}
+            />
           </div>
         )}
         <div className="col-12 col-md-10 mb-5">
@@ -56,6 +67,7 @@ console.log(data);
             title={`${user.username}'s thoughts...`}
             showTitle={false}
             showUsername={false}
+            handleEditClick = {handleEditClick}
           /> 
         </div>
 

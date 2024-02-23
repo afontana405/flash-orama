@@ -35,7 +35,18 @@ export const ADD_CARD = gql`
     }
   }
 `;
+//EDIT_CARD
+export const EDIT_CARD = gql`
+  mutation editCard($_id:String!,$question: String!, $answer: String!) {
 
+    editCard(_id:$_id,front: $question,back: $answer) {
+      _id
+      front
+      back
+    
+    }
+  }
+`;
 export const DELETE_CARD = gql`
   mutation deleteCard($_id: String!) {
 

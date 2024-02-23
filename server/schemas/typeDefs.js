@@ -38,6 +38,7 @@ const typeDefs = `
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addCard(front: String!, back: String!): Card
+    editCard(_id:String!, front: String!, back: String!): Card
     deleteCard( _id: String!): Card
     addCategory(categoryName: String!): Category
     updateUserCards(cardId: ID!): User
