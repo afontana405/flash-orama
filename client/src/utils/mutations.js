@@ -36,6 +36,16 @@ export const ADD_CARD = gql`
   }
 `;
 
+export const DELETE_CARD = gql`
+  mutation deleteCard($_id: String!) {
+
+    deleteCard(_id: $_id) {
+      _id
+     
+    
+    }
+  }
+`;
 export const ADD_COMMENT = gql`
   mutation addComment($thoughtId: ID!, $commentText: String!) {
     addComment(thoughtId: $thoughtId, commentText: $commentText) {
