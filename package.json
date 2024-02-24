@@ -8,12 +8,14 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal ./public/logo.svg"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vite-pwa/assets-generator": "^0.2.4",
     "concurrently": "^8.2.0",
     "vite-plugin-pwa": "^0.19.0",
     "workbox-window": "^7.0.0"
