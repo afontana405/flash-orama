@@ -28,8 +28,8 @@ const FlipCard = ({_id, front, back }) => {
              },
       });
 
-      
-    { catch (err) {
+    }
+    catch (err) {
       console.error(err);
     }
   }
@@ -64,6 +64,5 @@ const FlipCard = ({_id, front, back }) => {
       </div>
     </ReactCardFlip>
   );
-};
-
+  }
 export default FlipCard;
