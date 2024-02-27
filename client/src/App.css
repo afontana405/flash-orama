@@ -21,7 +21,9 @@
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
-
+.bgflipcard {
+  background-color: var(--card) !important;
+}
 .navbar{
   background-color: var(--primary);
 }

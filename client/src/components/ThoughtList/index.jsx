@@ -15,10 +15,10 @@ const ThoughtList = ({
   return (
     <div>
       {showTitle && <h3>{title}</h3>}
-      <div className="d-flex flex-wrap justify-content-between">
+      <div className="row">
         {thoughts &&
           thoughts.map((thought) => (
-            <div key={thought._id} className="card m-3 " style={{minWidth:"18%",maxWidth:"40%"}}>
+            <div key={thought._id} className=" col-sm-12 col-md-6" >
              
 
               <FlipCard _id={thought._id} front={thought.front} back={thought.back} 

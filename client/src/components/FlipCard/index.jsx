@@ -26,7 +26,7 @@ const FlipCard = ({ _id, front, back, handleEditClick }) => {
   };
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
-     <div className="card shadow">
+     <div className="card bgflipcard p-2">
       <div className="card-body position-relative">
         <div className="position-absolute top-0 px-2 d-flex justify-content-between w-100">
         <div onClick={() => handleDelete(_id)}>
@@ -36,15 +36,15 @@ const FlipCard = ({ _id, front, back, handleEditClick }) => {
               <MdModeEditOutline />
             </div>
         </div>
-        <div className="mt-4">{front}</div>
+        <div className="mt-4 mb-2">{front}</div>
 
         <button className="btn btn-primary mt-3" onClick={handleFlip}>
-           Ans
+           Answer
         </button>
       </div>
     </div>
 
-    <div className="card shadow">
+    <div className="card bgflipcard">
       <div className="card-body position-relative">
         <div className="position-absolute top-0 px-2 d-flex justify-content-between w-100">
         <div onClick={() => handleDelete(_id)}>
@@ -54,10 +54,10 @@ const FlipCard = ({ _id, front, back, handleEditClick }) => {
               <MdModeEditOutline />
             </div>
         </div>
-        <div className="mt-4">{back}</div>
+        <div className="mt-4 mb-2">{back}</div>
 
         <button className="btn btn-danger mt-3" onClick={handleFlip}>
-         Qns
+         Question
         </button>
       </div>
     </div>

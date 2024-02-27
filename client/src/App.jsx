@@ -41,7 +41,7 @@ function App() {
     <ApolloProvider client={client}>
       <div className="flex-column justify-flex-start min-100-vh">
         <Header />
-        <div className="container outlet-wrapper">
+        <div className="container-fluid outlet-wrapper pt-4">
           <Outlet />
         </div>
         <Footer />
