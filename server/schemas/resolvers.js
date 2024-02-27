@@ -69,6 +69,26 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      editCard: async (parent, { _id, front, back }, context) => {
+        if (context.user) {
+            // Check if the card exists
+            const card = await Card.findById(_id);
+            if (!card) {
+                throw new Error('Card not found!');
+            }
+    
+            // Update the card in the database with the new front and back values
+            const updatedCard = await Card.findByIdAndUpdate(
+                _id,
+                { $set: { front: front, back: back } },
+                { new: true }  // Return the updated document
+            );
+    
+            // No need to update the user document, as the card's ID remains unchanged
+            return updatedCard;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+    },
       addCategory: async (parent, { categoryName }) => {
         return await Category.create({ categoryName });
       },
