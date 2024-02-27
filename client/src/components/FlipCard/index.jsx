@@ -29,7 +29,7 @@ const FlipCard = ({_id, front, back }) => {
       });
 
       
-    } catch (err) {
+    { catch (err) {
       console.error(err);
     }
   }
