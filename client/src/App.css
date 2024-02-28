@@ -5,12 +5,52 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+
+ :root{
+  --primary:#264653;
+  --secondary:#2a9d8f;
+  --btn:#e9c46a;
+  --card:#f4a261;
+  
+
+
+ }
  html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
+.bgflipcard {
+  background-color: var(--card) !important;
+}
+.navbar{
+  background-color: var(--primary);
+}
+.outlet-wrapper{
+  background-color: var(--secondary);
+}
+
+.test{
+  background-color:var(--secondary);
+}
+
+.btn-background{
+  background-color: var(--btn);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 6px 3px 3px rgba(0,0,0,0.6);
+  padding: .4rem;
+}
+.btn-background-link{
+  background-color: var(--btn);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 6px 3px 3px rgba(0,0,0,0.6);
+  padding: .5rem;
+ color:#000000
+}
+
 
 /* Sections
    ========================================================================== */
@@ -56,12 +96,12 @@ hr {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-pre {
+/* pre {
   font-family: monospace, monospace;
   /* 1 */
-  font-size: 1em;
+  /* font-size: 1em; */
   /* 2 */
-}
+/* } */ */
 
 /* Text-level semantics
    ========================================================================== */
@@ -100,7 +140,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  /* font-family: monospace, monospace; */
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -153,11 +193,11 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
+  /* font-family: inherit; */
   /* 1 */
   font-size: 100%;
   /* 1 */
-  line-height: 1.15;
+  /* line-height: 1.15; */ 
   /* 1 */
   margin: 0;
   /* 2 */
@@ -356,9 +396,10 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
+  font-family:  "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:200;
+  font-style: normal;
   font-size: 16px;
   color: #1a1a1a;
 }
@@ -369,7 +410,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'JetBrains Mono', monospace;
+  /* font-family: 'JetBrains Mono', monospace; */
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
