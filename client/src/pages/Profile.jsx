@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 import ThoughtForm from '../components/ThoughtForm';
 import ThoughtList from '../components/ThoughtList';
 // import FlipCard from '../components/FlipCard';
+import studying from "../assets/Studying.jpg"
 
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
@@ -31,10 +32,15 @@ console.log(data);
 
   if (!user?.username) {
     return (
+      <>
       <h4>
         You need to be logged in to see this. Use the navigation links above to
         sign up or log in!
       </h4>
+      <div className='studying'>
+    <img src={studying} className="img-fluid" alt="" />
+      </div>
+      </>
     );
   }
 const handleEditClick = (card)=>{

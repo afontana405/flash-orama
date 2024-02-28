@@ -24,6 +24,13 @@
 .bgflipcard {
   background-color: var(--card) !important;
 }
+
+.studying{
+  background-image: url(./assets/Studying.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .navbar{
   background-color: var(--primary);
 }
